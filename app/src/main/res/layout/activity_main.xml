@@ -44,9 +44,6 @@
         android:rowCount="3"
         android:padding="10dp"
         android:layout_centerInParent="true">
-
-        <!-- Grid items will be added dynamically in MainActivity.java -->
-
     </GridLayout>
 
 </RelativeLayout>

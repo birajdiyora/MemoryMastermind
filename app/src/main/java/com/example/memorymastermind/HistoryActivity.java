@@ -56,7 +56,6 @@ public class HistoryActivity extends AppCompatActivity {
         adapter = new HistoryAdapter(this, userDataList);
         recyclerView.setAdapter(adapter);
         fetchWinningData();
-//        Collections.reverse(userDataList);
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

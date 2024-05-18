@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> currentRoundImages;
     private ArrayList<Integer> correctOrder;
     private ArrayList<Integer> userSelections;
-    private int timer = 15;  // Changed from 10 to 15 seconds
+    private int timer = 15;
     private int selectionCount = 0;
     private FirebaseFirestore firestore;
     private static final String PREFS_NAME = "user_prefs";
@@ -71,10 +71,8 @@ public class MainActivity extends AppCompatActivity {
         initializeImagePool();
         initializeGrid();
 
-        // Start the timer
         startTimer();
 
-        // Display images for 15 seconds
         handler.postDelayed(this::enableImageClicks, 15000);  // Changed from 10000 to 15000 milliseconds
     }
 
@@ -101,17 +99,6 @@ public class MainActivity extends AppCompatActivity {
         else{
             return true;
         }
-//        switch (item.getItemId()) {
-//            case R.id.action_history:
-//                // Navigate to HistoryActivity
-//
-//            case R.id.action_logout:
-//                // Handle logout action
-//                // For example: Clear user data and navigate to login screen
-//                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
         return false;
     }
     private void initializeImagePool() {
@@ -130,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             imageView.setImageResource(currentRoundImages.get(i));
             frameLayout.setTag(currentRoundImages.get(i));
             frameLayout.setOnClickListener(this::onImageClick);
-            frameLayout.setClickable(false); // Initially make images not clickable
+            frameLayout.setClickable(false);
             GridLayout.LayoutParams params = new GridLayout.LayoutParams();
             params.width = 0;
             params.height = 0;
@@ -155,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startTimer() {
-        timerTextView.setText(String.valueOf(timer));  // Initialize timer display
+        timerTextView.setText(String.valueOf(timer));
         timerRunnable = new Runnable() {
             @Override
             public void run() {
@@ -178,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
             ImageView imageView = frameLayout.findViewById(R.id.imageView);
             imageView.setImageResource(currentRoundImages.get(i));
             frameLayout.setTag(currentRoundImages.get(i));
-            frameLayout.setClickable(true); // Make images clickable after 15 seconds
+            frameLayout.setClickable(true);
         }
     }
 
