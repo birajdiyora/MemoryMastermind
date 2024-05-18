@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:title="Memory Mastermind"
+        app:titleTextColor="@android:color/white"
+        android:popupTheme="@style/PopupMenuStyle"
+        android:titleTextColor="@android:color/white" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:id="@+id/main">
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:padding="16dp"
+        android:text="10"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/holo_red_light"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"/>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/timerTextView"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:padding="10dp"
+        android:layout_centerInParent="true">
+
+        <!-- Grid items will be added dynamically in MainActivity.java -->
+
+    </GridLayout>
+
+</RelativeLayout>
+</LinearLayout>

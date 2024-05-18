@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "321657414226",
+    "project_id": "memory-mastermind-7d529",
+    "storage_bucket": "memory-mastermind-7d529.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321657414226:android:1135a3df95d30ea271f58b",
+        "android_client_info": {
+          "package_name": "com.example.memorymastermind"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmM4_PwJEqIxPv8QBoSCwmppcNY8aiVBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
